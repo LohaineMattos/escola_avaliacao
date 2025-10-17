@@ -43,7 +43,7 @@ Siga estes passos para configurar e testar o sistema em sua máquina:
 ### 1. Clonar o repositório
 
 ```bash
-git clone https://github.com/GuilhermeCanina/escolaavaliacao.git
+git clone https://github.com/LohaineMattos/escola_avaliacao.git
 cd escolaavaliacao
 ```
 
