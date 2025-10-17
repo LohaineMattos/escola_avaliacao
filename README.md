@@ -3,7 +3,7 @@
 ### Objetivo
 Desenvolver um sistema web full-stack para gerenciar turmas e atividades, permitindo que professores autentiquem-se, registrem, consultem e excluam turmas e atividades associadas.
 
-### Contexto
+### Contextualização
 A organização das atividades aplicadas pelos professores é essencial para o acompanhamento do aprendizado e para a gestão do conteúdo já trabalhado. Em muitas escolas de regiões remotas do Brasil, a falta de um sistema acessível prejudica docentes, estudantes e o processo educativo como um todo. Este projeto busca reduzir esse problema com uma solução simples e prática.
 
 ### Desafio
