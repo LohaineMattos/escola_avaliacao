@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap');
+
+:root {
+  --roxo-escuro: #00b395;
+  --roxo: #190052;
+  --roxo-claro: #00b395;
+  --branco: #ffffff;
+  --cinza: #f3f0fa;
+  --sombra: rgba(0, 0, 0, 0.1);
+  --radius: 10px;
+  --header-grad: linear-gradient(90deg, #190052, #190052);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Cal Sans', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, var(--roxo-escuro), var(--roxo));
+  min-height: 100vh;
+  color: var(--roxo-escuro);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 90px;
+}
+
+header {
+  width: 100%;
+  background: var(--header-grad);
+  padding: 15px 30px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+.professor-info {
+  font-size: 1em;
+  color: var(--branco);
+  background: rgba(255, 255, 255, 0.12);
+  padding: 8px 15px;
+  border-radius: 25px;
+  font-weight: 500;
+  text-align: center;
+  min-width: 120px;
+}
+
+header h1 {
+  color: var(--branco);
+  font-size: 1.6em;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin: 0 auto;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+header a {
+  text-decoration: none;
+  color: var(--roxo);
+  font-weight: 600;
+  background: var(--branco);
+  padding: 8px 18px;
+  border-radius: 25px;
+  transition: all 0.25s ease;
+}
+
+header a:hover {
+  background: #e6f0ff;
+  color: #190052  ;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+main {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  margin: 40px auto;
+}
+
+.dashboard-header {
+  text-align: center;
+  margin-bottom: 30px;
+  width: 100%;
+  padding: 24px;
+  background: var(--cinza);
+  border-radius: var(--radius);
+  box-shadow: 0 6px 20px var(--sombra);
+}
+
+.dashboard-header h2 {
+  font-size: 28px;
+  color: var(--roxo);
+  margin-bottom: 8px;
+}
+
+.dashboard-header p {
+  color: #5f5a6b;
+  margin-bottom: 16px;
+}
+
+.dashboard-header a {
+  display: inline-block;
+  background: var(--roxo);
+  color: var(--branco);
+  text-decoration: none;
+  padding: 10px 16px;
+  border-radius: var(--radius);
+  transition: 0.2s;
+}
+
+.dashboard-header a:hover {
+  background: var(--roxo-claro);
+}
+
+/* SEÇÕES DE ATIVIDADES */
+.atividades-section {
+  width: 100%;
+  background: var(--branco);
+  border-radius: var(--radius);
+  box-shadow: 0 6px 20px var(--sombra);
+  padding: 24px;
+  overflow-x: auto;
+}
+
+.atividades-section h3 {
+  color: var(--roxo);
+  margin-bottom: 12px;
+}
+
+.atividades-section table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--branco);
+  border-radius: 8px;
+  overflow: hidden;
+  table-layout: fixed;
+}
+
+.atividades-section thead {
+  background: var(--roxo);
+  color: var(--branco);
+}
+
+.turmas-section h3 {
+  color: var(--roxo);
+  margin-bottom: 12px;
+}
+
+th,
+td {
+  padding: 12px;
+  text-align: left;
+}
+
+tbody tr:nth-child(even) {
+  background: #f8f6ff;
+}
+
+tbody tr:hover {
+  background: #ede6ff;
+}
+
+/* Botões da tabela */
+button,
+.tabela-btn,
+.ver-detalhes {
+  background: var(--roxo);
+  color: var(--branco);
+  border: none;
+  border-radius: 6px;
+  padding: 6px 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover,
+.tabela-btn:hover,
+.ver-detalhes:hover {
+  background: var(--roxo-claro);
+}
+
+/* RESPONSIVO */
+@media (max-width: 700px) {
+  main {
+    margin: 20px;
+    padding: 16px;
+  }
+
+  table {
+    font-size: 14px;
+  }
+
+  nav h1 {
+    font-size: 20px;
+  }
+}
+
+/* === MODAL === */
+.modal {
+  display: none; /* 🔹 começa escondido */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 24px;
+  border-radius: 12px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content h3 {
+  margin-bottom: 16px;
+}
+
+.modal-content input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+}
